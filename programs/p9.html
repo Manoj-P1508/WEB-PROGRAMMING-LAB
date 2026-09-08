@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Types of CSS</title> 
+    <!-- External CSS Link --> 
+    <link rel="stylesheet" href="../css/style.css"> 
+    <!-- Internal CSS --> 
+    <style> 
+        body { 
+            background-color: #f2f2f2; 
+            font-family: Arial, sans-serif; 
+        } 
+        h2 { 
+            color: blue; 
+            text-align: center; 
+        } 
+        table { 
+            width: 70%; 
+            margin: auto; 
+            border-collapse: collapse; 
+        } 
+        table, th, td { 
+            border: 1px solid black; 
+        } 
+        th { 
+            background-color: darkblue; 
+            color: white; 
+        } 
+        th, td { 
+            padding: 10px; 
+            text-align: center; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1 style="color:red;text-align:center;">Inline CSS Example</h1> 
+    <h2>Internal CSS Example</h2> 
+    <p style="font-size:18px;color:green;text-align:center;"> 
+        This paragraph uses Inline CSS. 
+    </p> 
+    <h3 class="external">External CSS Example</h3> 
+    <p class="content">External CSS is stored in a separate file.</p> 
+    <table> 
+        <tr> 
+            <th>CSS Type</th> 
+            <th>Description</th> 
+        </tr> 
+        <tr> 
+            <td>Inline</td> 
+            <td>Applied directly to HTML elements.</td> 
+        </tr> 
+        <tr> 
+            <td>Internal</td> 
+            <td>Written inside &lt;style&gt; tag.</td> 
+        </tr> 
+        <tr> 
+            <td>External</td> 
+            <td>Stored in separate CSS file.</td> 
+        </tr> 
+    </table> 
+</body> 
+</html> 
