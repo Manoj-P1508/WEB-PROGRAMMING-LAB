@@ -15,6 +15,23 @@ Solutions for the Web Programming Lab course.
 
 Open `programs/index.html` in a browser to navigate between programs.
 
+1. Create a basic HTML page displaying college name, heading, paragraph, and horizontal line.
+2. Design a webpage using text formatting tags such as bold, italic, underline, superscript, and subscript.
+3. Create a webpage containing hyperlinks to different websites and internal page links.
+4. Develop a webpage to display images with proper height, width, and alternate text.
+5. Design a timetable using HTML tables with rowspan and colspan.
+6. Create ordered, unordered, and definition lists for course details.
+7. Develop a student registration form using HTML form controls.
+8. Create a webpage using semantic HTML tags such as header, nav, section, article, and footer.
+9. Design a webpage using Inline, Internal, and External CSS.
+10. Create a webpage to demonstrate CSS selectors, colors, fonts, and background properties.
+11. Design a webpage using margin, padding, border, and box model concepts.
+12. Create a responsive webpage layout using Flexbox or CSS Grid.
+13. Write a JavaScript program to perform arithmetic operations using operators.
+14. Write a JavaScript program to find whether a number is even or odd using conditional statements.
+15. Write a JavaScript program to generate factorial of a number using loops.
+16. Develop a JavaScript program for form validation (name, email, mobile number). 
+
 ## Programs
 
 | No. | Program | File |
@@ -30,11 +47,11 @@ Open `programs/index.html` in a browser to navigate between programs.
 | 9 | Inline, Internal, and External CSS | `programs/p9.html` | 
 | 10 | CSS selectors, colors, fonts, background properties | `programs/p10.html` | 
 | 11 | Margin, padding, border, box model | `programs/p11.html` | 
-| 12 | Responsive layout using Flexbox/Grid | — | 
-| 13 | Arithmetic operations using operators | — | 
-| 14 | Even or odd number using conditionals | — | 
-| 15 | Factorial of a number using loops | — | 
-| 16 | Form validation (name, email, mobile number) | — | 
+| 12 | Responsive layout using Flexbox/Grid | `programs/p12.html` | 
+| 13 | Arithmetic operations using operators | `programs/p13.html` | 
+| 14 | Even or odd number using conditionals | `programs/p14.html` | 
+| 15 | Factorial of a number using loops | `programs/p15.html` | 
+| 16 | Form validation (name, email, mobile number) | `programs/p16.html`| 
 
 ## Notes
 
