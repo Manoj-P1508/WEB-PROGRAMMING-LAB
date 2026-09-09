@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Responsive Flexbox & Grid</title> 
+    <style> 
+        body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 20px;
+                background:#f1f5f9; 
+            } 
+        /* Grid Container */ 
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 30px; 
+        } 
+        .card { 
+                background: white;
+                padding: 20px; 
+                border-radius: 8px; 
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            } 
+        /* Flexbox Navbar */ 
+        .flex-nav { 
+            display: flex; 
+            justify-content: space-between; 
+            background: #0f172a; 
+            color: white; 
+            padding: 15px; 
+            border-radius: 8px; 
+        } 
+
+        /* Media Query for Mobile */ 
+        @media (max-width: 600px) 
+        { 
+            .flex-nav { 
+                flex-direction: column; 
+                text-align: center; 
+                gap: 10px; 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <nav class="flex-nav"> 
+        <div><strong>My Website</strong></div> 
+        <div>Home | Courses | Contact</div> 
+    </nav> 
+    <h2>Responsive Grid System</h2> 
+    <div class="grid-container"> 
+        <div class="card"><h3>Module 1</h3><p>HTML5 Fundamentals</p></div> 
+        <div class="card"><h3>Module 2</h3><p>CSS3 Styling & Grid</p></div> 
+        <div class="card"><h3>Module 3</h3><p>JavaScript Essentials</p></div> 
+    </div> 
+</body> 
+</html>
