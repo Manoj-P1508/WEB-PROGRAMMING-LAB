@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================
+         HTML HEAD SECTION
+         ========================= -->
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Complete HTML and CSS demonstration for BCA students">
+
+    <meta name="keywords"
+          content="HTML, CSS, BCA, Web Programming">
+
+    <meta name="author"
+          content="BCA Department">
+
+    <title>HTML & CSS Master Demo</title>
+
+
+    <!-- =========================
+         INTERNAL CSS
+         ========================= -->
+
+    <style>
+
+        /* =========================================
+           1. CSS RESET
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================================
+           2. BODY
+           ========================================= */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+
+            color: #222222;
+            background-color: #f4f6f8;
+
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================================
+           3. HEADER
+           ========================================= */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #182848,
+                #4b6cb7
+            );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            border-bottom: 5px solid #ffd700;
+
+            min-height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            text-shadow:
+                2px 2px 5px black;
+
+            margin-bottom: 10px;
+        }
+
+
+        header p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+
+        /* =========================================
+           4. NAVIGATION BAR
+           ========================================= */
+
+        nav {
+            background-color: #222222;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 20px;
+
+            display: inline-block;
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        /* PSEUDO-CLASS :hover */
+
+        nav a:hover {
+            background-color: #ffd700;
+            color: #222222;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* PSEUDO-CLASS :active */
+
+        nav a:active {
+            background-color: red;
+            color: white;
+        }
+
+
+        /* PSEUDO-CLASS :focus */
+
+        nav a:focus {
+            outline: 3px solid orange;
+        }
+
+
+        /* =========================================
+           5. MAIN CONTAINER
+           ========================================= */
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 30px auto;
+
+            padding: 20px;
+        }
+
+
+        /* =========================================
+           6. SECTION
+           ========================================= */
+
+        section {
+            background-color: white;
+
+            margin-bottom: 30px;
+
+            padding: 30px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+        section h2 {
+            color: #182848;
+
+            border-bottom: 3px solid #4b6cb7;
+
+            padding-bottom: 8px;
+
+            margin-bottom: 20px;
+
+            position: relative;
+        }
+
+
+        /* =========================================
+           PSEUDO-ELEMENT ::after
+           ========================================= */
+
+        section h2::after {
+            content: " ★";
+
+            color: #ffd700;
+
+            font-size: 20px;
+        }
+
+
+        /* =========================================
+           7. TEXT ELEMENTS
+           ========================================= */
+
+        .text-demo {
+            margin-bottom: 20px;
+        }
+
+
+        .text-demo p {
+            margin-bottom: 10px;
+        }
+
+
+        .highlight {
+            background-color: yellow;
+
+            color: black;
+
+            padding: 3px 6px;
+
+            border-radius: 4px;
+        }
+
+
+        .important {
+            color: red;
+
+            font-weight: bold;
+        }
+
+
+        .quote {
+            background-color: #eeeeee;
+
+            border-left: 5px solid #4b6cb7;
+
+            padding: 15px;
+
+            margin: 15px 0;
+
+            font-style: italic;
+        }
+
+
+        code {
+            background-color: #222222;
+
+            color: #00ff88;
+
+            padding: 4px 8px;
+
+            border-radius: 4px;
+
+            font-family: "Courier New", monospace;
+        }
+
+
+        /* =========================================
+           8. LISTS
+           ========================================= */
+
+        ul {
+            list-style-type: square;
+
+            margin-left: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        ol {
+            list-style-type: decimal;
+
+            margin-left: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        dl {
+            margin: 15px 0;
+        }
+
+
+        dt {
+            font-weight: bold;
+
+            color: #4b6cb7;
+        }
+
+
+        dd {
+            margin-left: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================================
+           9. TABLE
+           ========================================= */
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 20px;
+
+            overflow: hidden;
+
+            border-radius: 8px;
+        }
+
+
+        caption {
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+
+        th,
+        td {
+            border: 1px solid #cccccc;
+
+            padding: 12px;
+
+            text-align: center;
+        }
+
+
+        th {
+            background-color: #182848;
+
+            color: white;
+        }
+
+
+        /* PSEUDO-CLASS :nth-child */
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+
+        tr:hover {
+            background-color: #dbe8ff;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           10. IMAGE
+           ========================================= */
+
+        .demo-image {
+            width: 250px;
+            height: 160px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 5px solid white;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.3);
+
+            transition:
+                transform 0.5s ease,
+                filter 0.5s ease;
+        }
+
+
+        .demo-image:hover {
+            transform: scale(1.08);
+
+            filter: brightness(1.2);
+        }
+
+
+        /* =========================================
+           11. FLEXBOX
+           ========================================= */
+
+        .flex-container {
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            padding: 20px;
+
+            background-color: #eeeeee;
+        }
+
+
+        .flex-item {
+            flex: 1 1 200px;
+
+            min-width: 150px;
+
+            padding: 30px;
+
+            background-color: #4b6cb7;
+
+            color: white;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+
+        .flex-item:hover {
+            transform: translateY(-10px);
+        }
+
+
+        /* =========================================
+           12. CSS GRID
+           ========================================= */
+
+        .grid-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            grid-template-rows:
+                auto;
+
+            gap: 20px;
+
+            padding: 20px;
+        }
+
+
+        .grid-item {
+            background-color: #182848;
+
+            color: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+        }
+
+
+        .grid-item:first-child {
+            grid-column: span 2;
+        }
+
+
+        /* =========================================
+           13. BOX MODEL
+           ========================================= */
+
+        .box-model {
+            width: 300px;
+
+            min-height: 150px;
+
+            margin: 30px auto;
+
+            padding: 30px;
+
+            border: 10px solid #4b6cb7;
+
+            border-radius: 20px;
+
+            background-color: #e9f0ff;
+
+            box-shadow:
+                10px 10px 20px rgba(0, 0, 0, 0.2);
+
+            text-align: center;
+        }
+
+
+        /* =========================================
+           14. POSITIONING
+           ========================================= */
+
+        .position-box {
+            position: relative;
+
+            height: 200px;
+
+            background-color: #eeeeee;
+
+            border: 2px solid #999999;
+        }
+
+
+        .absolute-box {
+            position: absolute;
+
+            top: 20px;
+
+            right: 20px;
+
+            width: 120px;
+
+            padding: 15px;
+
+            background-color: #ff9800;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        /* =========================================
+           15. FORM
+           ========================================= */
+
+        form {
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        label {
+            display: block;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+
+            margin-bottom: 5px;
+        }
+
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 2px solid #cccccc;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+
+            background-color: white;
+
+            color: #222222;
+
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        /* :focus pseudo-class */
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4b6cb7;
+
+            outline: none;
+
+            box-shadow:
+                0 0 8px rgba(75, 108, 183, 0.4);
+        }
+
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+
+            margin-right: 5px;
+        }
+
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: auto;
+
+            padding: 12px 25px;
+
+            margin-top: 20px;
+
+            border: none;
+
+            background-color: #182848;
+
+            color: white;
+
+            cursor: pointer;
+
+            border-radius: 6px;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #4b6cb7;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================================
+           16. BUTTON
+           ========================================= */
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            margin: 10px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background-color: #4b6cb7;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .btn:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================================
+           17. PSEUDO-CLASSES
+           ========================================= */
+
+        .pseudo-demo p:first-child {
+            color: red;
+        }
+
+
+        .pseudo-demo p:last-child {
+            color: blue;
+        }
+
+
+        .pseudo-demo p:nth-child(2) {
+            color: green;
+        }
+
+
+        .pseudo-demo p:not(:first-child) {
+            font-style: italic;
+        }
+
+
+        .checkbox-demo input:checked + label {
+            color: green;
+
+            font-weight: bold;
+        }
+
+
+        input:disabled {
+            background-color: #dddddd;
+
+            cursor: not-allowed;
+        }
+
+
+        input:required {
+            border-left: 5px solid orange;
+        }
+
+
+        /* =========================================
+           18. PSEUDO-ELEMENTS
+           ========================================= */
+
+        .pseudo-element::before {
+            content: "→ ";
+
+            color: #4b6cb7;
+
+            font-weight: bold;
+        }
+
+
+        .pseudo-element::after {
+            content: " ✓";
+
+            color: green;
+
+            font-weight: bold;
+        }
+
+
+        .first-letter::first-letter {
+            font-size: 40px;
+
+            font-weight: bold;
+
+            color: red;
+        }
+
+
+        .first-line::first-line {
+            font-weight: bold;
+
+            color: #4b6cb7;
+        }
+
+
+        ::selection {
+            background-color: #ffd700;
+
+            color: black;
+        }
+
+
+        /* =========================================
+           19. TRANSFORM
+           ========================================= */
+
+        .transform-container {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+
+            margin: 30px 0;
+        }
+
+
+        .transform-box {
+            width: 100px;
+
+            height: 100px;
+
+            background-color: #4b6cb7;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: transform 0.5s;
+        }
+
+
+        .transform-box:hover {
+            transform: rotate(15deg) scale(1.1)
+                       translateY(-10px);
+        }
+
+
+        /* =========================================
+           20. ANIMATION
+           ========================================= */
+
+        @keyframes moveBox {
+
+            0% {
+                transform: translateX(0)
+                           rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(100px)
+                           rotate(90deg);
+            }
+
+            50% {
+                transform: translateX(200px)
+                           rotate(180deg);
+            }
+
+            75% {
+                transform: translateX(100px)
+                           rotate(270deg);
+            }
+
+            100% {
+                transform: translateX(0)
+                           rotate(360deg);
+            }
+        }
+
+
+        .animated-box {
+            width: 100px;
+
+            height: 100px;
+
+            background-color: #ff9800;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            animation-name: moveBox;
+
+            animation-duration: 5s;
+
+            animation-timing-function: ease-in-out;
+
+            animation-delay: 0s;
+
+            animation-iteration-count: infinite;
+
+            animation-direction: alternate;
+
+            animation-fill-mode: both;
+        }
+
+
+        /* =========================================
+           21. LOADING ANIMATION
+           ========================================= */
+
+        .loader {
+            width: 50px;
+
+            height: 50px;
+
+            border: 6px solid #dddddd;
+
+            border-top: 6px solid #4b6cb7;
+
+            border-radius: 50%;
+
+            margin: 30px auto;
+
+            animation:
+                spin 1s linear infinite;
+        }
+
+
+        @keyframes spin {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        /* =========================================
+           22. GRADIENT
+           ========================================= */
+
+        .gradient-box {
+            padding: 40px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #182848,
+                    #4b6cb7,
+                    #6a11cb
+                );
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================================
+           23. OPACITY
+           ========================================= */
+
+        .opacity-box {
+            padding: 30px;
+
+            background-color: #4b6cb7;
+
+            color: white;
+
+            opacity: 0.7;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================================
+           24. OVERFLOW
+           ========================================= */
+
+        .overflow-box {
+            height: 100px;
+
+            overflow: auto;
+
+            padding: 15px;
+
+            border: 2px solid #4b6cb7;
+        }
+
+
+        /* =========================================
+           25. FOOTER
+           ========================================= */
+
+        footer {
+            background-color: #222222;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+            margin-top: 30px;
+        }
+
+
+        footer a {
+            color: #ffd700;
+
+            text-decoration: none;
+        }
+
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================
+           26. MEDIA QUERY
+           ========================================= */
+
+        @media screen and (max-width: 768px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item:first-child {
+                grid-column: span 1;
+            }
+
+            main {
+                width: 95%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header id="top">
+
+        <h1>Web Programming</h1>
+
+        <p>
+            Complete HTML & CSS Demonstration
+            for BCA Students
+        </p>
+
+    </header>
+
+
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
+
+    <nav>
+
+        <a href="#html">HTML</a>
+
+        <a href="#text">Text</a>
+
+        <a href="#lists">Lists</a>
+
+        <a href="#table">Table</a>
+
+        <a href="#media">Media</a>
+
+        <a href="#layout">Layout</a>
+
+        <a href="#form">Form</a>
+
+        <a href="#css">CSS</a>
+
+        <a href="#animation">Animation</a>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
+    <main>
+
+
+        <!-- =====================================
+             HTML ELEMENTS
+             ===================================== -->
+
+        <section id="html">
+
+            <h2>1. HTML Elements</h2>
+
+            <p>
+                HTML stands for
+                <strong>HyperText Markup Language</strong>.
+            </p>
+
+            <p>
+                HTML is used to create the
+                <em>structure</em> of a web page.
+            </p>
+
+            <p>
+                This is
+                <mark>highlighted text</mark>.
+            </p>
+
+            <p>
+                Water formula is H<sub>2</sub>O.
+            </p>
+
+            <p>
+                Area = x<sup>2</sup>.
+            </p>
+
+            <p>
+                <small>
+                    This is small text.
+                </small>
+            </p>
+
+            <p>
+                <del>Deleted text</del>
+                and
+                <ins>Inserted text</ins>.
+            </p>
+
+            <p>
+                <abbr title="HyperText Markup Language">
+                    HTML
+                </abbr>
+                is a markup language.
+            </p>
+
+            <p>
+                <b>Bold</b>,
+                <i>Italic</i>,
+                <u>Underline</u>,
+                <s>Strikethrough</s>.
+            </p>
+
+            <p>
+                Keyboard shortcut:
+                <kbd>Ctrl + S</kbd>
+            </p>
+
+            <p>
+                Programming output:
+                <samp>Hello World</samp>
+            </p>
+
+            <p>
+                Variable:
+                <var>x</var>
+            </p>
+
+            <blockquote class="quote">
+
+                "Learning web programming
+                develops practical technical skills."
+
+                <cite>
+                    — Web Programming
+                </cite>
+
+            </blockquote>
+
+            <address>
+
+                BCA Department<br>
+
+                Vanguard Business School<br>
+
+                Bengaluru, Karnataka
+
+            </address>
+
+        </section>
+
+
+        <!-- =====================================
+             HEADINGS AND TEXT
+             ===================================== -->
+
+        <section id="text">
+
+            <h2>2. Headings and Text Formatting</h2>
+
+            <h1>Heading 1</h1>
+
+            <h2>Heading 2</h2>
+
+            <h3>Heading 3</h3>
+
+            <h4>Heading 4</h4>
+
+            <h5>Heading 5</h5>
+
+            <h6>Heading 6</h6>
+
+            <hr>
+
+            <p>
+                This is a paragraph containing
+                <span class="highlight">
+                    span element
+                </span>.
+            </p>
+
+            <p class="first-letter">
+                This paragraph demonstrates
+                the CSS ::first-letter pseudo-element.
+            </p>
+
+            <p class="first-line">
+                This paragraph demonstrates
+                the CSS ::first-line pseudo-element.
+                The first line receives special styling.
+            </p>
+
+            <p class="pseudo-element">
+                This text uses CSS pseudo-elements.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             LISTS
+             ===================================== -->
+
+        <section id="lists">
+
+            <h2>3. HTML Lists</h2>
+
+            <h3>Unordered List</h3>
+
+            <ul>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+                <li>PHP</li>
+
+            </ul>
+
+
+            <h3>Ordered List</h3>
+
+            <ol>
+
+                <li>Design</li>
+
+                <li>Develop</li>
+
+                <li>Test</li>
+
+                <li>Deploy</li>
+
+            </ol>
+
+
+            <h3>Description List</h3>
+
+            <dl>
+
+                <dt>HTML</dt>
+
+                <dd>
+                    Used to create web page structure.
+                </dd>
+
+                <dt>CSS</dt>
+
+                <dd>
+                    Used to style web pages.
+                </dd>
+
+            </dl>
+
+        </section>
+
+
+        <!-- =====================================
+             TABLE
+             ===================================== -->
+
+        <section id="table">
+
+            <h2>4. HTML Table</h2>
+
+            <table>
+
+                <caption>
+                    BCA Student Details
+                </caption>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Sl.No</th>
+
+                        <th>Name</th>
+
+                        <th>Course</th>
+
+                        <th>Marks</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>Rahul</td>
+
+                        <td>BCA</td>
+
+                        <td>85</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>Priya</td>
+
+                        <td>BCA</td>
+
+                        <td>90</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>Arun</td>
+
+                        <td>BCA</td>
+
+                        <td>78</td>
+
+                    </tr>
+
+                </tbody>
+
+
+                <tfoot>
+
+                    <tr>
+
+                        <td colspan="3">
+                            Average
+                        </td>
+
+                        <td>84.3</td>
+
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <!-- =====================================
+             IMAGE AND MEDIA
+             ===================================== -->
+
+        <section id="media">
+
+            <h2>5. Images and Media</h2>
+
+            <figure>
+
+                <img
+                    class="demo-image"
+                    src="https://via.placeholder.com/400x250"
+                    alt="Sample Web Programming Image"
+                    title="Sample Image"
+                    width="400"
+                    height="250"
+                >
+
+                <figcaption>
+                    Figure: Sample Image
+                </figcaption>
+
+            </figure>
+
+
+            <br>
+
+
+            <audio controls>
+
+                <source
+                    src="audio.mp3"
+                    type="audio/mpeg"
+                >
+
+                Your browser does not support
+                the audio element.
+
+            </audio>
+
+
+            <br><br>
+
+
+            <video
+                width="400"
+                height="250"
+                controls
+                poster="https://via.placeholder.com/400x250"
+            >
+
+                <source
+                    src="video.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support
+                the video element.
+
+            </video>
+
+
+            <br><br>
+
+
+            <iframe
+                width="400"
+                height="250"
+                src="https://www.example.com"
+                title="Example Website"
+            >
+            </iframe>
+
+        </section>
+
+
+        <!-- =====================================
+             LINKS
+             ===================================== -->
+
+        <section>
+
+            <h2>6. Hyperlinks</h2>
+
+            <p>
+
+                <a
+                    href="https://www.google.com"
+                    target="_blank"
+                    title="Open Google"
+                >
+                    Open Google
+                </a>
+
+            </p>
+
+            <p>
+
+                <a href="#top">
+                    Go to Top
+                </a>
+
+            </p>
+
+            <p>
+
+                <a href="mailto:example@example.com">
+                    Send Email
+                </a>
+
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             FLEXBOX
+             ===================================== -->
+
+        <section id="layout">
+
+            <h2>7. CSS Flexbox</h2>
+
+            <div class="flex-container">
+
+                <div class="flex-item">
+                    HTML
+                </div>
+
+                <div class="flex-item">
+                    CSS
+                </div>
+
+                <div class="flex-item">
+                    JavaScript
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             GRID
+             ===================================== -->
+
+        <section>
+
+            <h2>8. CSS Grid</h2>
+
+            <div class="grid-container">
+
+                <div class="grid-item">
+                    HTML
+                </div>
+
+                <div class="grid-item">
+                    CSS
+                </div>
+
+                <div class="grid-item">
+                    JavaScript
+                </div>
+
+                <div class="grid-item">
+                    PHP
+                </div>
+
+                <div class="grid-item">
+                    MySQL
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             BOX MODEL
+             ===================================== -->
+
+        <section>
+
+            <h2>9. CSS Box Model</h2>
+
+            <div class="box-model">
+
+                Content
+
+                <br>
+
+                Padding
+
+                <br>
+
+                Border
+
+                <br>
+
+                Margin
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             POSITION
+             ===================================== -->
+
+        <section>
+
+            <h2>10. CSS Position</h2>
+
+            <div class="position-box">
+
+                <div class="absolute-box">
+
+                    Absolute
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FORM
+             ===================================== -->
+
+        <section id="form">
+
+            <h2>11. HTML Form</h2>
+
+            <form
+                action="#"
+                method="post"
+                autocomplete="on"
+            >
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                    maxlength="50"
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    minlength="6"
+                    placeholder="Enter password"
+                >
+
+
+                <label for="age">
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="18"
+                    max="30"
+                >
+
+
+                <label for="dob">
+                    Date of Birth
+                </label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                >
+
+
+                <label>
+                    Gender
+                </label>
+
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                >
+
+                <label for="male">
+                    Male
+                </label>
+
+
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                >
+
+                <label for="female">
+                    Female
+                </label>
+
+
+                <label>
+                    Skills
+                </label>
+
+                <input
+                    type="checkbox"
+                    id="htmlSkill"
+                    name="skills"
+                    value="html"
+                >
+
+                <label for="htmlSkill">
+                    HTML
+                </label>
+
+
+                <input
+                    type="checkbox"
+                    id="cssSkill"
+                    name="skills"
+                    value="css"
+                >
+
+                <label for="cssSkill">
+                    CSS
+                </label>
+
+
+                <label for="course">
+                    Select Course
+                </label>
+
+                <select
+                    id="course"
+                    name="course"
+                >
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="bca">
+                        BCA
+                    </option>
+
+                    <option value="bba">
+                        BBA
+                    </option>
+
+                    <option value="mba">
+                        MBA
+                    </option>
+
+                </select>
+
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    cols="40"
+                    placeholder="Enter your message"
+                ></textarea>
+
+
+                <label for="browser">
+                    Choose Browser
+                </label>
+
+                <input
+                    list="browsers"
+                    id="browser"
+                    name="browser"
+                >
+
+                <datalist id="browsers">
+
+                    <option value="Chrome">
+
+                    <option value="Firefox">
+
+                    <option value="Edge">
+
+                    <option value="Safari">
+
+                </datalist>
+
+
+                <br>
+
+
+                <input
+                    type="submit"
+                    value="Submit"
+                >
+
+                <input
+                    type="reset"
+                    value="Reset"
+                >
+
+            </form>
+
+        </section>
+
+
+        <!-- =====================================
+             BUTTON
+             ===================================== -->
+
+        <section>
+
+            <h2>12. Buttons</h2>
+
+            <button
+                class="btn"
+                type="button"
+                onclick="alert('Hello BCA Students!')"
+            >
+                Click Me
+            </button>
+
+        </section>
+
+
+        <!-- =====================================
+             CSS PROPERTIES
+             ===================================== -->
+
+        <section id="css">
+
+            <h2>13. CSS Properties Demonstration</h2>
+
+            <p style="
+                color: red;
+                background-color: yellow;
+                font-size: 20px;
+                font-family: Georgia, serif;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+                text-decoration: underline;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                line-height: 2;
+            ">
+
+                Multiple CSS text properties
+
+            </p>
+
+
+            <div class="gradient-box">
+
+                Linear Gradient Background
+
+            </div>
+
+
+            <br>
+
+
+            <div class="opacity-box">
+
+                Opacity: 0.7
+
+            </div>
+
+
+            <br>
+
+
+            <div class="overflow-box">
+
+                This is an overflow demonstration.
+                When the content becomes larger than
+                the available height, the overflow
+                property allows the user to scroll
+                through the content.
+
+                This demonstrates how CSS controls
+                content that exceeds the size of
+                an element.
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PSEUDO CLASSES
+             ===================================== -->
+
+        <section>
+
+            <h2>14. CSS Pseudo-Classes</h2>
+
+            <div class="pseudo-demo">
+
+                <p>
+                    First paragraph
+                </p>
+
+                <p>
+                    Second paragraph
+                </p>
+
+                <p>
+                    Third paragraph
+                </p>
+
+                <p>
+                    Last paragraph
+                </p>
+
+            </div>
+
+
+            <br>
+
+
+            <div class="checkbox-demo">
+
+                <input
+                    type="checkbox"
+                    id="agree"
+                >
+
+                <label for="agree">
+                    I agree to the terms
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TRANSFORM
+             ===================================== -->
+
+        <section>
+
+            <h2>15. CSS Transform</h2>
+
+            <p>
+                Move the mouse over the boxes.
+            </p>
+
+            <div class="transform-container">
+
+                <div class="transform-box">
+                    Rotate
+                </div>
+
+                <div class="transform-box">
+                    Scale
+                </div>
+
+                <div class="transform-box">
+                    Translate
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ANIMATION
+             ===================================== -->
+
+        <section id="animation">
+
+            <h2>16. CSS Animation</h2>
+
+            <p>
+                The following object uses
+                <strong>@keyframes</strong>
+                animation.
+            </p>
+
+            <div class="animated-box">
+
+                BCA
+
+            </div>
+
+
+            <h3>Loading Animation</h3>
+
+            <div class="loader"></div>
+
+        </section>
+
+
+        <!-- =====================================
+             DETAILS / SUMMARY
+             ===================================== -->
+
+        <section>
+
+            <h2>17. Details and Summary</h2>
+
+            <details>
+
+                <summary>
+                    What is HTML?
+                </summary>
+
+                <p>
+                    HTML is used to create the
+                    structure of web pages.
+                </p>
+
+            </details>
+
+
+            <br>
+
+
+            <details>
+
+                <summary>
+                    What is CSS?
+                </summary>
+
+                <p>
+                    CSS is used to style HTML
+                    elements.
+                </p>
+
+            </details>
+
+        </section>
+
+
+        <!-- =====================================
+             PROGRESS / METER
+             ===================================== -->
+
+        <section>
+
+            <h2>18. Progress and Meter</h2>
+
+            <label for="progress">
+                Course Completion
+            </label>
+
+            <progress
+                id="progress"
+                value="75"
+                max="100"
+            >
+                75%
+            </progress>
+
+
+            <br><br>
+
+
+            <label for="marks">
+                Performance
+            </label>
+
+            <meter
+                id="marks"
+                value="0.85"
+                min="0"
+                max="1"
+            >
+                85%
+            </meter>
+
+        </section>
+
+
+        <!-- =====================================
+             HTML ENTITIES
+             ===================================== -->
+
+        <section>
+
+            <h2>19. HTML Entities</h2>
+
+            <p>
+                Less than:
+                &lt;
+            </p>
+
+            <p>
+                Greater than:
+                &gt;
+            </p>
+
+            <p>
+                Ampersand:
+                &amp;
+            </p>
+
+            <p>
+                Copyright:
+                &copy;
+            </p>
+
+            <p>
+                Registered:
+                &reg;
+            </p>
+
+            <p>
+                Non-breaking space:
+                BCA&nbsp;Department
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 BCA Department
+        </p>
+
+        <p>
+            Web Programming Practical
+        </p>
+
+        <p>
+
+            <a href="#top">
+                Back to Top
+            </a>
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
