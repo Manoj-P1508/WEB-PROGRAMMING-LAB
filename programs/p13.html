@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>JavaScript Arithmetic Operations</title>  
+    <script> 
+        function calculate() { 
+            // Get input values 
+            var num1 = parseFloat(document.getElementById("n1").value); 
+            var num2 = parseFloat(document.getElementById("n2").value); 
+            // Check valid numbers 
+            if (isNaN(num1) || isNaN(num2)) { 
+                alert("Please enter valid numbers"); 
+                return; 
+            } 
+            // Perform arithmetic operations 
+            var res = 
+                "<b>Addition:</b> " + (num1 + num2) + "<br>" + 
+                "<b>Subtraction:</b> " + (num1 - num2) + "<br>" + 
+                "<b>Multiplication:</b> " + (num1 * num2) + "<br>" + 
+                "<b>Division:</b> " + (num1 / num2) + "<br>" + 
+                "<b>Modulus:</b> " + (num1 % num2) + "<br>" + 
+                "<b>Increment (Num1++):</b> " + (++num1) + "<br>" + 
+                "<b>Decrement (Num2--):</b> " + (--num2);
+                // Display result 
+            document.getElementById("result").innerHTML = res; 
+        } 
+    </script> 
+</head> 
+<body> 
+    <h2>JavaScript Arithmetic Operations</h2> 
+    Enter First Number: 
+    <input type="number" id="n1"><br><br> 
+    Enter Second Number: 
+    <input type="number" id="n2"><br><br> 
+    <button onclick="calculate()">Calculate</button> 
+    <hr> 
+    <div id="result"></div> 
+</body> 
+</html>
