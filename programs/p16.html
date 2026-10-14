@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Form Validation</title> 
+            <script> 
+            function validateForm() { 
+                    var name = document.forms["regForm"]["name"].value; 
+                    var email = document.forms["regForm"]["email"].value; 
+                    var mobile = document.forms["regForm"]["mobile"].value; 
+                    var pwd = document.forms["regForm"]["pwd"].value; 
+                    var age = document.forms["regForm"]["age"].value; 
+                    var nameRegex = /^[A-Za-z\s]+$/;
+                    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    var mobileRegex = /^[6-9]\d{9}$/; 
+                    if(!name.match(nameRegex)) { 
+                        alert("Please enter a valid Name (letters only)."); 
+                        return false; 
+                    } 
+                    if(!email.match(emailRegex)) { 
+                        alert("Please enter a valid Email ID."); 
+                        return false; 
+                    } 
+                    if(!mobile.match(mobileRegex)) { 
+                        alert("Please enter a valid 10-digit Indian Mobile Number."); 
+                        return false; 
+                    } 
+                    if(pwd.length==6) { 
+                        alert("Password must be at least 6 characters long."); 
+                        return false; 
+                    } 
+                    if(isNaN(age) && age>=17 && age <= 30) { 
+                        alert("Age must be between 17 and 30."); 
+                        return false; 
+                    } 
+                    alert("Registration Successful!"); 
+
+                    return true; 
+            } 
+            </script> 
+    </head> 
+<body> 
+    <h2>Student Registration Form Validation</h2> 
+    <form name="regForm" onsubmit="return validateForm()"> 
+        Name:       <input type="text" name="name" required>    <br><br> 
+        Email:      <input type="email" name="email" required>  <br><br> 
+        Mobile:     <input type="text" name="mobile" required>  <br><br> 
+        Password:   <input type="password" name="pwd" required> <br><br> 
+        Age:        <input type="number" name="age" required>   <br><br> 
+                    <input type="submit" value="Submit Registration"> 
+    </form> 
+</body> 
+</html> 
