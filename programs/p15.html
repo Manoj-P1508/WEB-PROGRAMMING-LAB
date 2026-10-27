@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Factorial Generator</title> 
+    <script> 
+        function computeFactorial() { 
+        var n = parseInt(document.getElementById("factInput").value); 
+        var res = document.getElementById("factResult"); 
+        if (isNaN(n) || n < 0) { 
+            res.innerHTML = "<span style='color:red;'>Please enter a non-negative integer.</span>"; 
+            return; 
+        } 
+        
+        var fact = 1; 
+        for (var i = 1; i <= n; i++) { 
+                fact = fact * i; 
+        } 
+        res.innerHTML = "Factorial of <b>" + n + "</b> is <b>" + fact + "</b>"; 
+    } 
+    </script> 
+</head> 
+<body> 
+
+        <h2>Factorial Calculator</h2> 
+        Enter Number: 
+        <input type="number" id="factInput"> 
+        <button onclick="computeFactorial()">
+        Calculate Factorial 
+        </button> 
+        <p id="factResult" style="font-size:18px;"></p> 
+</body> 
+</html>
